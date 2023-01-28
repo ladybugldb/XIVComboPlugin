@@ -3,6 +3,14 @@
     public static class DNC
     {
         public const uint
+            Fountain = 15990,
+            Entrechat = 16000,
+            FountainFall = 15992,
+            Pirouette = 16002,
+            Cascade = 15989,
+            Emboite = 15999,
+            ReverseCascade = 15991,
+            Jete = 16001,
             Bladeshower = 15994,
             Bloodshower = 15996,
             Windmill = 15993,
@@ -21,6 +29,8 @@
             BuffFourfoldFanDance = 2699,
             BuffStarfallDanceReady = 2700,
             BuffSilkenSymmetry = 2693,
-            BuffSilkenFlow = 2694;
+            BuffSilkenFlow = 2694,
+            BuffStandardStep = 1818,
+            BuffTechnicalStep = 1819;
     }
 }

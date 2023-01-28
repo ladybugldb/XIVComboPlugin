@@ -652,6 +652,41 @@ namespace XIVComboPlugin
 
             // DANCER
 
+            // ST GCDs are split into two buttons, 
+            // Replaces each GCD with its procced version.
+            if (Configuration.ComboPresets.HasFlag(CustomComboPreset.DancerSTGcdFeature))
+            {
+                if (actionID == DNC.FountainFall)
+                {
+                    if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
+                        return DNC.Pirouette;
+                    if (SearchBuffArray(DNC.BuffFlourishingFlow) || SearchBuffArray(DNC.BuffSilkenFlow))
+                        return DNC.FountainFall;
+                    return DNC.Fountain;
+                }
+
+                if (actionID == DNC.ReverseCascade)
+                {
+                    if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
+                        return DNC.Jete;
+                    if (SearchBuffArray(DNC.BuffFlourishingSymmetry) || SearchBuffArray(DNC.BuffSilkenSymmetry))
+                        return DNC.ReverseCascade;
+                    return DNC.Cascade;
+                }
+
+                if (actionID == DNC.RisingWindmill)
+                {
+                    if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
+                        return DNC.Entrechat;
+                }
+
+                if (actionID == DNC.Bloodshower)
+                {
+                    if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
+                        return DNC.Emboite;
+                }
+            }
+
             // AoE GCDs are split into two buttons, because priority matters
             // differently in different single-target moments. Thanks yoship.
             // Replaces each GCD with its procced version.
