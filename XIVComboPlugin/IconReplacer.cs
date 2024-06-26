@@ -681,13 +681,13 @@ namespace XIVComboPlugin
                 if (actionID == DNC.RisingWindmill)
                 {
                     if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
-                        return DNC.Entrechat;
+                        return DNC.Emboite;
                 }
 
                 if (actionID == DNC.Bloodshower)
                 {
                     if (SearchBuffArray(DNC.BuffStandardStep) || SearchBuffArray(DNC.BuffTechnicalStep))
-                        return DNC.Emboite;
+                        return DNC.Entrechat;
                 }
             }
 
